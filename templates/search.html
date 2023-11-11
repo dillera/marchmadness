@@ -52,5 +52,22 @@
             {% endfor %}
         </div>
     </div>
+
+<hr>
+
+<div class="results">
+    {% for message in messages %}
+        <div class="message">
+            <h3>{{ message.subject }}</h3>
+            <p><strong>From:</strong> {{ message.from_email }}</p>
+            <p><strong>Date:</strong> {{ message.date }}</p>
+            <p><strong>To:</strong> {{ message.to_email }}</p>
+            <p>{{ message.content | safe }}</p> <!-- Use the safe filter if you trust the content -->
+        </div>
+    {% else %}
+        <p>No messages to display.</p>
+    {% endfor %}
+</div>
+
 </body>
 </html>

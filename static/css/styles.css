@@ -178,3 +178,34 @@ input[type="radio"] {
   vertical-align: middle;
 }
 
+/* Add this to your styles.css file */
+
+.results {
+  margin-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.message {
+  padding: 15px;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.message h3 {
+  color: #333;
+  font-size: 1.2em;
+}
+
+.message p {
+  color: #666;
+  line-height: 1.4;
+  margin: 10px 0;
+}
+
+/* This adds a hover effect to your message blocks */
+.message:hover {
+  background-color: #eef2f1;
+}
+
