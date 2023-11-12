@@ -1,23 +1,24 @@
 /* Add your CSS styling here */
 
-/* styles.css */
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Add this to your CSS file */
+@font-face {
+    font-family: 'Fira Code';
+    src: url('fonts/FiraCode-Regular.woff2') format('woff2'),
+         url('fonts/FiraCode-Regular.woff') format('woff'),
+         url('fonts/FiraCode-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.container {
-  max-width: 400px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+@font-face {
+    font-family: 'Fira Code';
+    src: url('fonts/FiraCode-Bold.woff2') format('woff2'),
+         url('fonts/FiraCode-Bold.woff') format('woff'),
+         url('fonts/FiraCode-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
+
 
 .form-group {
   margin-bottom: 15px;
@@ -28,14 +29,6 @@ label {
   margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
 
 input[type="submit"] {
   width: 100%;
@@ -158,28 +151,6 @@ body {
 }
 
 
-/* Add this to your styles.css file */
-
-/* Remove default list styling */
-ul {
-  list-style-type: none; /* Removes bullets */
-  padding-left: 0; /* Removes indentation */
-}
-
-/* Custom radio button label styling */
-.radio-label {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-/* Align radio buttons with the text */
-input[type="radio"] {
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-/* Add this to your styles.css file */
-
 .results {
   margin-top: 20px;
   border-top: 1px solid #eaeaea;
@@ -223,5 +194,26 @@ input[type="radio"] {
   flex-direction: column;
   align-items: flex-start; /* Align items to the start of the flex container */
 }
+
+.results {
+  margin-top: 90px;
+  max-height: 800px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Style for message content */
+.message-content {
+  white-space: pre-wrap; /* Since preformatted text can overflow, pre-wrap will keep it within the container */
+  word-break: break-word; /* To prevent horizontal scrolling */
+  margin: 0;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-family: 'Fira Code', monospace;
+}
+
+
 
 

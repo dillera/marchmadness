@@ -4,6 +4,8 @@
     <title>Search</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container"">
@@ -24,15 +26,11 @@
 
             <div class="form-group">
               {{ form.match_type.label }}
-              <ul>
-                {% for subfield in form.match_type %}
-                <li>
-                    <label class="radio-label">
-                        {{ subfield }} {{ subfield.label.text }}
-                    </label>
-                </li>
-                {% endfor %}
-              </ul>
+             
+                <label class="radio-label">
+                 {{ form.match_type }}
+                </label>
+               
             </div>
 
             <div class="form-group">
@@ -51,7 +49,7 @@
             <p><strong>From:</strong> {{ message.from_email }}</p>
             <p><strong>Date:</strong> {{ message.date }}</p>
             <p><strong>To:</strong> {{ message.to_email }}</p>
-            <p>{{ message.content }}</p> <!-- Use the safe filter if you trust the content -->
+            <pre class="message-content">{{ message.content }}</pre>
         </div>
     {% else %}
         <p>No messages to display.</p>
