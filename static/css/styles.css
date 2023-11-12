@@ -209,3 +209,19 @@ input[type="radio"] {
   background-color: #eef2f1;
 }
 
+/* Add this to your styles.css file */
+
+/* Ensure that the search container and results container are block elements */
+.search-container, .results {
+  display: block;
+  width: 100%;
+}
+
+/* Optional: If you have a flex container wrapping these, ensure it is styled to flow vertically */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+
